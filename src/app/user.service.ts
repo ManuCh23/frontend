@@ -9,8 +9,7 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class UserService {
-  private readonly apiUrl = `${environment.apiUrl}/users`; // Assicurati che l'URL dell'API includa /users
-
+  private readonly apiUrl = `${environment.apiUrl}/users`; 
   constructor(private readonly http: HttpClient) {}
 
   getUsers(): Observable<User[]> {

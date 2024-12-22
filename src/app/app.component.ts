@@ -4,16 +4,16 @@ import {
   NavigationEnd,
   NavigationError,
   RouterModule,
-} from '@angular/router'; // Routing
-import { Component } from '@angular/core'; // Component decorator
-import { CommonModule } from '@angular/common'; // Common module (per pipe, ngIf, ngFor, ecc.)
+} from '@angular/router'; 
+import { Component } from '@angular/core'; 
+import { CommonModule } from '@angular/common'; 
 import { HttpClient } from '@angular/common/http';
-import { MatIconModule } from '@angular/material/icon'; // Material Icon module
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; // Spinner
-import { MatCardModule } from '@angular/material/card'; // Material Card module
-import { MatButtonModule } from '@angular/material/button'; // Material Button module
-import { ReactiveFormsModule } from '@angular/forms'; // Reactive Forms Module
-import { UserService } from './user.service'; // Servizi specifici dell'app
+import { MatIconModule } from '@angular/material/icon'; 
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'; 
+import { MatCardModule } from '@angular/material/card'; 
+import { MatButtonModule } from '@angular/material/button'; 
+import { ReactiveFormsModule } from '@angular/forms'; 
+import { UserService } from './user.service'; 
 
 @Component({
   selector: 'app-root',
@@ -41,11 +41,11 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         console.log('Navigazione in corso...');
-        // Mostra lo spinner quando la navigazione inizia
+        
         this.loading = true;
       }
       if (event instanceof NavigationEnd || event instanceof NavigationError) {
-        // Nascondi lo spinner quando la navigazione termina o c'è un errore
+      
         this.loading = false;
       }
     });
